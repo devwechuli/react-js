@@ -10,6 +10,9 @@ class Contact extends Component {
   onShowClick = e => {
     this.setState({ showContactInfo: !this.state.showContactInfo });
   };
+  onDeleteClick = () => {
+    this.props.deleteClickHandler();
+  };
   render() {
     const { showContactInfo } = this.state;
     //we can destructure so that we don't have to keep using this.pros
@@ -17,7 +20,17 @@ class Contact extends Component {
     return (
       <div className="card card-body mb-3">
         <h4>
-          {name} <i className="fas fa-angle-down" onClick={this.onShowClick} />
+          {name}{" "}
+          <i
+            className="fas fa-angle-down"
+            style={{ cursor: "pointer" }}
+            onClick={this.onShowClick}
+          />
+          <i
+            className="fa fa-times"
+            style={{ cursor: "pointer", float: "right", color: "red" }}
+            onClick={this.onDeleteClick}
+          />
         </h4>
         {showContactInfo ? (
           <ul className="list-group">
@@ -31,7 +44,8 @@ class Contact extends Component {
 }
 
 Contact.PropTypes = {
-  contact: PropTypes.object.isRequired
+  contact: PropTypes.object.isRequired,
+  deleteClickHandler:PropTypes.func.isRequired
 };
 
 export default Contact;
