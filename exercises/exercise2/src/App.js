@@ -5,6 +5,7 @@ import CharComponent from "./components/CharComponent";
 
 class App extends Component {
   state = {
+    userInputC:'',
     wordlength: 0,
     charArrlist: []
   };
@@ -22,7 +23,7 @@ class App extends Component {
     let charStr = e.target.value;
     let charArr = charStr.split("");
 
-    this.setState({ wordlength: userInput, charArrlist: charArr });
+    this.setState({ wordlength: userInput, charArrlist: charArr,userInputC:charStr });
   };
 
   render() {
@@ -34,8 +35,9 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <input type="text" onChange={this.wordCounterHandler} />
+        <input type="text" onChange={this.wordCounterHandler} value={this.state.userInputC} />
         <p>{this.state.wordlength}</p>
+        <p>{this.state.userInputC}</p>
         <ValidationComponent textlength={this.state.wordlength}>
           <p>{words}</p>
         </ValidationComponent>
