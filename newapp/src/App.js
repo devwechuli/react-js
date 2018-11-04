@@ -21,9 +21,6 @@ class App extends Component {
     const person = {
       ...this.state.persons[personIndex]
     };
-
-    // const person = Object.assign({}, this.state.persons[personIndex]);
-
     person.name = event.target.value;
 
     const persons = [...this.state.persons];
@@ -31,9 +28,9 @@ class App extends Component {
 
     this.setState({ persons: persons });
   };
-
   deletePersonHandler = personIndex => {
-    // const persons = this.state.persons.slice();
+    //const persons = this.state.persons.slice(); //Use slice without parameters to copy the whole array/object
+    //or we can use the spreas operator as below, this updates the state in an immutable fashion
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({ persons: persons });
