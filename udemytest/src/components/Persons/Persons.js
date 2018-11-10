@@ -1,4 +1,3 @@
-
 import Person from "./Person/Person";
 import React, { Component } from "react";
 
@@ -16,7 +15,20 @@ import React, { Component } from "react";
 //   });
 
 class Persons extends Component {
+  constructor(props) {
+    super(props);
+    console.log("[Persons.js] inside constructor", props);
+
+    //we can implement state here using this.state(){} and use it the same way as before
+  }
+  componentWillMount() {
+    console.log("[Persons.js] Inside componentWillMount()");
+  }
+  componentDidMount() {
+    console.log("[Persons.js] Inside componentDidMount()");
+  }
   render() {
+    console.log("[Persons.js] Inside render()");
     return this.props.persons.map((person, index) => {
       return (
         <Person

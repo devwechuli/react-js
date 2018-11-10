@@ -5,6 +5,18 @@ import Persons from "../components/Persons/Persons";
 import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log("[App.js] inside constructor", props);
+
+    //we can implement state here using this.state(){} and use it the same way as before
+  }
+  componentWillMount() {
+    console.log("[App.js] Inside componentWillMount()");
+  }
+  componentDidMount() {
+    console.log("[App.js] Inside componentDidMount()");
+  }
   state = {
     persons: [
       { id: "asfa1", name: "Max", age: 28 },
@@ -44,6 +56,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("[App.js] inside render()");
     let persons = null;
 
     if (this.state.showPersons) {
