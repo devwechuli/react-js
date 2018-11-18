@@ -40,8 +40,8 @@ class Persons extends Component {
       nextProps,
       nextState
     );
-   // return nextProps.persons !== this.props.persons;
-   return true;
+    return nextProps.persons !== this.props.persons || nextProps.changed !== this.props.changed || nextProps.clicked !== this.props.clicked;
+  // return true;
   }
   componentWillUpdate(nextProps,nextState){
     console.log(
