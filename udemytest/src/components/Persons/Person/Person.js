@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import styles from "./Person.module.css";
 
 // const person = ( props ) => {
-    
+
 //     return (
 //         <div className={styles.Person}>
 //             <p onClick={props.click}>I'm {props.name} and I am {props.age} years old!</p>
@@ -11,7 +11,6 @@ import styles from "./Person.module.css";
 //         </div>
 //     )
 // };
-
 
 class Person extends Component {
   constructor(props) {
@@ -29,15 +28,31 @@ class Person extends Component {
   render() {
     console.log("[Person.js] Inside render()");
     return (
-        <div className={styles.Person}>
-        <p onClick={this.props.click}>I'm {this.props.name} and I am {this.props.age} years old!</p>
+      <div className={styles.Person}>
+        <p onClick={this.props.click}>
+          I'm {this.props.name} and I am {this.props.age} years old!
+        </p>
         <p>{this.props.children}</p>
-        <input type="text" onChange={this.props.changed} value={this.props.name} />
-    </div>
-    )
+        <input
+          type="text"
+          onChange={this.props.changed}
+          value={this.props.name}
+        />
+      </div>
+
+     );
+    // return [
+    //   <p onClick={this.props.click}>
+    //     , I'm {this.props.name} and I am {this.props.age} years old!
+    //   </p>,
+    //   <p>{this.props.children}</p>,
+    //   <input
+    //     type="text"
+    //     onChange={this.props.changed}
+    //     value={this.props.name}
+    //   />
+    // ];
   }
 }
-
-
 
 export default Person;
