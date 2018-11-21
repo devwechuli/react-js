@@ -3,6 +3,7 @@ import React, { PureComponent } from "react";
 import classes from "./App.module.css";
 import Persons from "../components/Persons/Persons";
 import Cockpit from "../components/Cockpit/Cockpit";
+import Auxilliary from "../hoc/Auxilliary";
 
 class App extends PureComponent {
   constructor(props) {
@@ -26,22 +27,18 @@ class App extends PureComponent {
   //   );
   //   //return true;
   //   return nextState.persons !== this.state.person ||
-  //   nextState.showPersons !== this.state.showPersons     
+  //   nextState.showPersons !== this.state.showPersons
   // }
 
-
-  componentWillUpdate(nextProps,nextState){
+  componentWillUpdate(nextProps, nextState) {
     console.log(
       "[UPDATE App.js] Inside componentWillUpdate",
       nextProps,
       nextState
     );
   }
-  componentDidUpdate(){
-    console.log(
-      "[UPDATE App.js] Inside componentDidUpdate"
-      
-    );
+  componentDidUpdate() {
+    console.log("[UPDATE App.js] Inside componentDidUpdate");
   }
   state = {
     persons: [
@@ -50,7 +47,8 @@ class App extends PureComponent {
       { id: "asdf11", name: "Stephanie", age: 26 }
     ],
     otherState: "some other value",
-    showPersons: false
+    showPersons: false,
+    toggleClicked: 0
   };
 
   nameChangedHandler = (event, id) => {
@@ -78,10 +76,14 @@ class App extends PureComponent {
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
-    this.setState({ showPersons: !doesShow });
+    this.setState((prevState,props)=>{
+      return{
+        showPersons: !doesShow,
+        toggleClicked: prevState.toggleClicked + 1
+      }
+      
+    });
   };
-
-  
 
   render() {
     console.log("[App.js] inside render()");
@@ -100,15 +102,23 @@ class App extends PureComponent {
     }
 
     return (
-      <div className={classes.App}>
-      <button onClick={()=>{this.setState({showPersons:true})}}>Show Persons</button>
-        <Cockpit
-          showPersons={this.state.showPersons}
-          persons={this.state.persons}
-          togglePersonsHandler={this.togglePersonsHandler}
-        />
+      <div classes={classes.App}>
+        <Auxilliary>
+          <button
+            onClick={() => {
+              this.setState({ showPersons: true });
+            }}
+          >
+            Show Persons
+          </button>
+          <Cockpit
+            showPersons={this.state.showPersons}
+            persons={this.state.persons}
+            togglePersonsHandler={this.togglePersonsHandler}
+          />
 
-        {persons}
+          {persons}
+        </Auxilliary>
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));

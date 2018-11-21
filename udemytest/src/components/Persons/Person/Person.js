@@ -55,4 +55,10 @@ class Person extends Component {
   }
 }
 
+Person.propTypes = {
+click: propTypes.func,
+name:propTypes.string,
+age:propTypes.
+changed:,
+};
 export default Person;
