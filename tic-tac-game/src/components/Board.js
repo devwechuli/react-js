@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import Square from "./Square";
 
 class Board extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true
-    };
-  }
+  
 
   calculateWinner(squares) {
     const lines = [
@@ -44,8 +38,8 @@ class Board extends Component {
   renderSquare(i) {
     return (
       <Square
-        value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)}
+        value={this.props.squares[i]}
+        onClick={() => this.props.handleClick(i)}
       />
     );
   }
