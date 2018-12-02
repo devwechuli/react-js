@@ -11,7 +11,7 @@ class Car {
 
 class BMW extends Car {
   constructor() {
-    super(Car);
+    super();
     this.windows = 5;
   }
 }
