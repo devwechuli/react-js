@@ -9,7 +9,10 @@ const Allnews = props => {
     )
   });
   console.log(items);
-  return <div>{items}</div>;
+  return <div>
+  {props.children}
+  {items}
+  </div>;
 };
 
 export default Allnews;
