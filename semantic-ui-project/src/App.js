@@ -71,7 +71,7 @@ class App extends Component {
               </a>
             </Card.Content>
           </Card>
-          <Card link>
+          <Card      link>
             <Image src="https://cdn.pixabay.com/photo/2017/02/11/20/51/fashion-2058703_960_720.jpg" />
             <Card.Content>
               <Card.Header>Matthew</Card.Header>
