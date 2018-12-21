@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PostForm from "./PostForm";
 import Logo from './load.svg'
 
 class Posts extends Component {
@@ -22,12 +21,13 @@ class Posts extends Component {
         <div key={post.id}>
           <h3>{post.title}</h3>
           <p>{post.body}</p>
+          <br />
+
         </div>
       );
     });
     return (
-      <div>
-          <PostForm/>
+      <div>        
         <h1>Posts</h1>
         {this.state.posts.length >0 ?postItems:(<div><img src={Logo} alt="spinner"/></div>)}
       </div>
