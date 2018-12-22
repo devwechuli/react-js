@@ -10,24 +10,29 @@ class PostForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  onSubmit(e){
+  async onSubmit(e) {
+   
     e.preventDefault();
     const post = {
-      title :this.state.title.slice(),
-      body: this.state.body
-    }
-    fetch('https://jsonplaceholder.typicode.com/posts',{
-      method:'post',
-      headers:{
-        'content-type':'application/json'
-      },body:JSON.stringify(post)
-    }).then(data=>data.json()).then(data=>console.log(data))
+      title: this.state.title.slice(),
+      body: this.state.body.slice()
+    };
+
+    const mydata = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(post)
+    });
+    const jsonData = await mydata.json();
+    console.log(jsonData);
   }
   render() {
     return (
       <div>
         <h1>Add Post</h1>
-        <form action="">
+        <form onSubmit={e=>this.onSubmit(e)}>
           <div>
             <label htmlFor="title">Title</label> <br />
             <input
@@ -50,9 +55,7 @@ class PostForm extends Component {
           </div>
           <br />
           <br />
-          <button onSubmit={event => this.onSubmit(event)} type="submit">
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
