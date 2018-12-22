@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,6 +17,9 @@ const Header = () => {
       >
         Profiles
       </NavLink>
+      <NavLink to="/life">Life</NavLink>
+      <NavLink to="/conditional">Conditional</NavLink>
+      <NavLink to="/purecomponent">PureComp</NavLink>
     </header>
   );
 };
