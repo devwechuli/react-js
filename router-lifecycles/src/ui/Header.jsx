@@ -20,6 +20,7 @@ const Header = () => {
       <NavLink to="/life">Life</NavLink>
       <NavLink to="/conditional">Conditional</NavLink>
       <NavLink to="/purecomponent">PureComp</NavLink>
+      <NavLink to="/user">User</NavLink>
     </header>
   );
 };

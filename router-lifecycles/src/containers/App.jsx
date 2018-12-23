@@ -8,6 +8,7 @@ import PostItem from "../components/PostItem";
 import Life from "../components/Life";
 import Conditional from "../components/Conditional";
 import Pure from "../components/Pure";
+import User from "../components/User";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/conditional" component={Conditional} />
           <Route path="/profile" component={Profile} />
           <Route path="/life" component={Life} />
+          <Route path="/user" component={User} />
           <Route path="/" exact component={Home} />
           <Route render={() => <h3>Oops, 404 -Page Not Found</h3>} />
         </Switch>

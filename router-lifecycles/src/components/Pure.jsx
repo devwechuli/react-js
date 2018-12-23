@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, {PureComponent } from "react";
 
-class Pure extends Component {
+class Pure extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,7 @@ class Pure extends Component {
   }
 
   render() {
+    console.log('Inside Render')
     return (
       <div>
         <h3>{this.state.title}</h3>

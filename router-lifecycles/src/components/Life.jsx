@@ -21,14 +21,17 @@ class Life extends Component {
     console.log("Inside ComponentWillUnmount");
     clearInterval(this.timerID);
   }
-  shouldComponentUpdate() {
-    console.log("Inside shouldComponentUpdate");
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("Inside shouldComponentUpdate"); //we can check if we need to change anything her
+    if (nextState === this.state.title) {
+      return false;
+    }
+
     return true;
   }
   componentDidUpdate() {
     console.log("Inside componentDidUpdate");
   }
-  
 
   tick() {
     this.setState({
