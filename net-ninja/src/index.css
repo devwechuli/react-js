@@ -16,3 +16,7 @@ code {
 .home{
   padding: 10px;
 }
+.separator{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
