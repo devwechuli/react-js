@@ -18,6 +18,7 @@ class AddToDo extends Component {
     e.preventDefault();
 
     this.props.addToDo(this.state.todos);
+    e.target.reset(); ///resets the form
   };
   render() {
     return (
