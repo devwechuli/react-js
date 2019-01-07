@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import {Redirect} from 'react-router-dom'
+
 import AuthContext from "../context/AuthContext";
 
 const SignUp = props => {
-  console.log(props);
   const auth = useContext(AuthContext);
   const [formState, handler] = useState({ email: "", password: "" });
   const [errorMessage, errorMessageHandler] = useState("");
   const [successMsg, successMsgHandler] = useState("");
-  const [formSucess, formSuccessHandler] = useState(false);
+
   // const auth
   const inputHandler = e => {
     if (e.target.id === "email") {
@@ -34,10 +34,9 @@ const SignUp = props => {
       );
 
       auth.login(response.data.token);
-      console.log(auth);
+
       axios.defaults.headers.common["Authorization"] = response.data.token;
       sessionStorage.setItem("token", response.data.token);
-      //redirect();
     } catch (error) {
       errorMessageHandler("The user already exists");
       console.log(error);
@@ -76,7 +75,7 @@ const SignUp = props => {
           <button className="btn btn-primary mt-3">Sign Up</button>
         </div>
       </form>
-      {}
+      {auth.isAuthenticated ? <Redirect to="/dashboard" /> : null}
     </div>
   );
 };
