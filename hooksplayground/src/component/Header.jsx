@@ -3,6 +3,7 @@ import AuthContext from "../authContext";
 
 const Header = props => {
   const auth = useContext(AuthContext);
+  console.log(auth);
   return (
     <header>
  

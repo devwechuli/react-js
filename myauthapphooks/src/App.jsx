@@ -5,20 +5,48 @@ import Dashboard from "./components/Dashboard";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import authContext from "./context/authContext";
+import AuthContext from "./context/AuthContext";
 
 const App = props => {
+  const [authStatus, setAuth] = useState(false);
+  const [token, setToken] = useState("blah blah");
+  const login = tokenString => {
+    setAuth(true);
+    setToken(tokenString);
+  };
+  const logout = () => {
+    setAuth(false);
+    setToken("");
+  };
+  console.log(authStatus);
   return (
     <React.Fragment>
-      <authContext.Provider>
+      <AuthContext.Provider
+        value={{
+          isAuthenticated: authStatus,
+          token,
+          login: tokenString => {
+            login(tokenString);
+          },
+          logout
+        }}
+      >
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/signin" component={SignIn} />
-          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route exact path="/signin">
+            <SignIn />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
         </Switch>
-      </authContext.Provider>
+      </AuthContext.Provider>
     </React.Fragment>
   );
 };
