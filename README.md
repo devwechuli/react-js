@@ -1,2 +1,2 @@
 # react-js
-Learning react js
+React Playground Repo
