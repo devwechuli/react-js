@@ -23,6 +23,7 @@ class NameForm extends Component {
           <label htmlFor="name">Name</label>
           <input
             value={this.state.value}
+            // value="this.state.value"
             onChange={this.handleChange}
             className="form-control"
             type="text"
