@@ -18,7 +18,8 @@ const App = () => {
         .then(response => response.json())
         .then(json => {
           setJokes(json.value);
-        });
+        })
+        .catch(error => console.log(error));
     },
     [jokeCount, refresh]
   );
