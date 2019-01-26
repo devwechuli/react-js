@@ -9,7 +9,7 @@ const Example = () => {
   return (
     <React.Fragment>
       <p>You clicked the button {count} times</p>
-      <button onClick={() => setCount(count + 1)} className="button is-info">
+      <button onClick={() => setCount(count + 1)} className="button is-info is-outlined">
         Click Me
       </button>
     </React.Fragment>
