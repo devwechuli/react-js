@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const App = () => {
   const [jokes, setJokes] = useState([]);
   const [jokeCount, setJokeCount] = useState(10);
+  const [refresh, setrefresh] = useState(false);
 
   const changeJokesNumber = e => {
     if (e.target.value) {
@@ -19,7 +20,7 @@ const App = () => {
           setJokes(json.value);
         });
     },
-    [jokeCount]
+    [jokeCount, refresh]
   );
   return (
     <React.Fragment>
@@ -54,6 +55,14 @@ const App = () => {
               onClick={() => setJokeCount(0)}
             >
               Clear Jokes
+            </button>
+
+            <button
+              style={{ marginTop: "7px", marginRight: "7px" }}
+              className="button is-info"
+              onClick={() => setrefresh(!refresh)}
+            >
+              Refresh Jokes
             </button>
           </div>
           <div style={{ marginLeft: "4px" }} className="column is-8">
