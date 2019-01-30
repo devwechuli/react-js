@@ -1,0 +1,230 @@
+[
+  {
+    "_id": {
+      "$oid": "5c3c4637b701d3f52333773a"
+    },
+    "app_id": "agriculture-iot",
+    "dev_id": "loradevice",
+    "hardware_serial": "FFEEEAAABBBEEAAE",
+    "port": 1,
+    "counter": 182,
+    "payload_raw": "AAAAEgAVAOp2nwElAQ==",
+    "payload_fields": {
+      "altitude": 30367,
+      "humidity": 18,
+      "lux": 293,
+      "pressure": 234,
+      "soilMoisture": 200,
+      "temperature": 21
+    },
+    "metadata": {
+      "time": "2019-01-14T08:20:04.374131987Z",
+      "frequency": 867.1,
+      "modulation": "LORA",
+      "data_rate": "SF7BW125",
+      "coding_rate": "4/5",
+      "gateways": [
+        {
+          "gtw_id": "eui-b827ebfffecad231",
+          "timestamp": 3568960043,
+          "time": "2019-01-14T08:20:04.289135Z",
+          "channel": 3,
+          "rssi": -81,
+          "snr": 11.5,
+          "rf_chain": 0,
+          "latitude": -1.30853,
+          "longitude": 36.81204,
+          "altitude": 1795
+        },
+        {
+          "gtw_id": "eui-b827ebfffe35bf5b",
+          "timestamp": 3568747123,
+          "time": "2019-01-14T08:20:04.296336Z",
+          "channel": 3,
+          "rssi": -75,
+          "snr": 9,
+          "rf_chain": 0,
+          "latitude": -1.3087,
+          "longitude": 36.81163,
+          "altitude": 629
+        }
+      ]
+    },
+    "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/agriculture-iot/ttn-mongo-api?key=ttn-account-v2.Id3kjFEkGHzTrot3fOMz6p5mW-las7pWlVi2OMRDwlU",
+    "time": {
+      "$date": "2019-01-14T08:20:07.281Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c3c4637b701d3f52333773a"
+    },
+    "app_id": "agriculture-iot",
+    "dev_id": "loradevice",
+    "hardware_serial": "FFEEEAAABBBEEAAE",
+    "port": 1,
+    "counter": 182,
+    "payload_raw": "AAAAEgAVAOp2nwElAQ==",
+    "payload_fields": {
+      "altitude": 20367,
+      "humidity": 28,
+      "lux": 299,
+      "pressure": 134,
+      "soilMoisture": 234,
+      "temperature": 22
+    },
+    "metadata": {
+      "time": "2019-01-14T08:20:04.374131987Z",
+      "frequency": 867.1,
+      "modulation": "LORA",
+      "data_rate": "SF7BW125",
+      "coding_rate": "4/5",
+      "gateways": [
+        {
+          "gtw_id": "eui-b827ebfffecad231",
+          "timestamp": 3568960043,
+          "time": "2019-01-14T08:20:04.289135Z",
+          "channel": 3,
+          "rssi": -81,
+          "snr": 11.5,
+          "rf_chain": 0,
+          "latitude": -1.30853,
+          "longitude": 36.81204,
+          "altitude": 1795
+        },
+        {
+          "gtw_id": "eui-b827ebfffe35bf5b",
+          "timestamp": 3568747123,
+          "time": "2019-01-14T08:20:04.296336Z",
+          "channel": 3,
+          "rssi": -75,
+          "snr": 9,
+          "rf_chain": 0,
+          "latitude": -1.3087,
+          "longitude": 36.81163,
+          "altitude": 629
+        }
+      ]
+    },
+    "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/agriculture-iot/ttn-mongo-api?key=ttn-account-v2.Id3kjFEkGHzTrot3fOMz6p5mW-las7pWlVi2OMRDwlU",
+    "time": {
+      "$date": "2019-01-14T08:20:07.281Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c3c4637b701d3f52333773a"
+    },
+    "app_id": "agriculture-iot",
+    "dev_id": "loradevice",
+    "hardware_serial": "FFEEEAAABBBEEAAE",
+    "port": 1,
+    "counter": 182,
+    "payload_raw": "AAAAEgAVAOp2nwElAQ==",
+    "payload_fields": {
+      "altitude": 30007,
+      "humidity": 17,
+      "lux": 193,
+      "pressure": 204,
+      "soilMoisture": 220,
+      "temperature": 25
+    },
+    "metadata": {
+      "time": "2019-01-14T08:20:04.374131987Z",
+      "frequency": 867.1,
+      "modulation": "LORA",
+      "data_rate": "SF7BW125",
+      "coding_rate": "4/5",
+      "gateways": [
+        {
+          "gtw_id": "eui-b827ebfffecad231",
+          "timestamp": 3568960043,
+          "time": "2019-01-14T08:20:04.289135Z",
+          "channel": 3,
+          "rssi": -81,
+          "snr": 11.5,
+          "rf_chain": 0,
+          "latitude": -1.30853,
+          "longitude": 36.81204,
+          "altitude": 1795
+        },
+        {
+          "gtw_id": "eui-b827ebfffe35bf5b",
+          "timestamp": 3568747123,
+          "time": "2019-01-14T08:20:04.296336Z",
+          "channel": 3,
+          "rssi": -75,
+          "snr": 9,
+          "rf_chain": 0,
+          "latitude": -1.3087,
+          "longitude": 36.81163,
+          "altitude": 629
+        }
+      ]
+    },
+    "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/agriculture-iot/ttn-mongo-api?key=ttn-account-v2.Id3kjFEkGHzTrot3fOMz6p5mW-las7pWlVi2OMRDwlU",
+    "time": {
+      "$date": "2019-01-14T08:20:07.281Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c3c4637b701d3f52333773a"
+    },
+    "app_id": "agriculture-iot",
+    "dev_id": "loradevice",
+    "hardware_serial": "FFEEEAAABBBEEAAE",
+    "port": 1,
+    "counter": 182,
+    "payload_raw": "AAAAEgAVAOp2nwElAQ==",
+    "payload_fields": {
+      "altitude": 31367,
+      "humidity": 19,
+      "lux": 255,
+      "pressure": 244,
+      "soilMoisture": 299,
+      "temperature": 28
+    },
+    "metadata": {
+      "time": "2019-01-14T08:20:04.374131987Z",
+      "frequency": 867.1,
+      "modulation": "LORA",
+      "data_rate": "SF7BW125",
+      "coding_rate": "4/5",
+      "gateways": [
+        {
+          "gtw_id": "eui-b827ebfffecad231",
+          "timestamp": 3568960043,
+          "time": "2019-01-14T08:20:04.289135Z",
+          "channel": 3,
+          "rssi": -81,
+          "snr": 11.5,
+          "rf_chain": 0,
+          "latitude": -1.30853,
+          "longitude": 36.81204,
+          "altitude": 1795
+        },
+        {
+          "gtw_id": "eui-b827ebfffe35bf5b",
+          "timestamp": 3568747123,
+          "time": "2019-01-14T08:20:04.296336Z",
+          "channel": 3,
+          "rssi": -75,
+          "snr": 9,
+          "rf_chain": 0,
+          "latitude": -1.3087,
+          "longitude": 36.81163,
+          "altitude": 629
+        }
+      ]
+    },
+    "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/agriculture-iot/ttn-mongo-api?key=ttn-account-v2.Id3kjFEkGHzTrot3fOMz6p5mW-las7pWlVi2OMRDwlU",
+    "time": {
+      "$date": "2019-01-14T08:20:07.281Z"
+    },
+    "__v": 0
+  }
+]
