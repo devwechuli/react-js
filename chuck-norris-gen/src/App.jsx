@@ -23,8 +23,10 @@ const App = () => {
     },
     [jokeCount, refresh]
   );
+
   return (
     <React.Fragment>
+  
       <div className="hero is-primary">
         <div className="hero-body">
           <h1 className="title has-text-centered">
@@ -32,6 +34,7 @@ const App = () => {
           </h1>
           <h2 className="subtitle has-text-centered">
             Laugh out Loud, Serious Jokers Here
+          
           </h2>
         </div>
       </div>
