@@ -1,9 +1,25 @@
-global.fetch = require('node-fetch');
-const config = require('universal-config');
+global.fetch = require("node-fetch");
+const config = require("universal-config");
 
-const Unsplash = require('unsplash-js').toJson;
-const express = require('express');
+const Unsplash = require("unsplash-js").default;
+const toJson = require("unsplash-js").toJson;
+const express = require("express");
 
 const unsplash = new Unsplash({
-    applicationId:config.get('APPLICATI')
-})
+  applicationId: config.get("APPLICATION_ID"),
+  secret: config.get("SECRET"),
+  callbackUrl: config.get("CALLBACK_URL")
+});
+
+const app = express();
+
+app.get("/api/photos", (req, res) => {
+  unsplash.photos
+    .listPhotos(1, 7)
+    .then(toJson)
+    .then(json => res.json(json));
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.info(`Server started on port ${PORT}`));
