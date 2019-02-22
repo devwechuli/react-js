@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.title {
+  font-family: "Carter One";
+}
+.container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Optional style for fetched images */
+.images {
+  display: flex;
+  max-width: 80%;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.single-photo {
+  max-width: 300px;
+  align-self: auto;
+  margin: 1% 2px;
+  flex-grow: 1;
+  vertical-align: middle;
+}
