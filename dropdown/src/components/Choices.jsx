@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Choice from "./Choice";
 
 const Choices = props => {
-  const [names, setnames] = useState({});
   const [activedropdown, setactivedropdown] = useState(false);
   console.log(props.data);
   return (
