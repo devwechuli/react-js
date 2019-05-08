@@ -13,7 +13,8 @@ const Choices = props => {
             type="checkbox"
             onChange={() => setactivedropdown(!activedropdown)}
           />
-          {props.data.name}
+                {props.data.name}
+
         </label>
         {activedropdown ? <Choice data={props.data} /> : null}
       </div>

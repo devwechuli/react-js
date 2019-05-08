@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Single from "./Single";
 
 const Choice = props => {
- 
   return (
     <React.Fragment>
       <div className="m-l-md">
@@ -11,7 +10,7 @@ const Choice = props => {
             <p>
               <label class="checkbox">
                 <input type="checkbox" />
-                {item.name}
+                    {item.name}
               </label>
             </p>
           );
@@ -20,9 +19,7 @@ const Choice = props => {
           <div>
             You might also like
             {props.data.related.map(item => {
-              return (
-               <Single data={item}/>
-              );
+              return <Single data={item} />;
             })}
           </div>
         ) : null}
