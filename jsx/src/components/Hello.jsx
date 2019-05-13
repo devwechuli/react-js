@@ -8,6 +8,7 @@ const people = [
     skills: ["programming", "data Science", "cloud computing", "devops"]
   },
   {
+    
     name: "Tony",
     age: 21,
     skills: ["mechanics", "electronics", "quantum", "assembly"]
@@ -15,6 +16,7 @@ const people = [
 ];
 class Hello extends Component {
   render() {
+    
     return (
       <React.Fragment>
         <Child name={people[0]["name"]} />
