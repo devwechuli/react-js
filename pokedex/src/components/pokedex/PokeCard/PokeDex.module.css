@@ -1,0 +1,5 @@
+.poke:hover{
+    box-shadow: 5px 5px 5px 5px grey;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
