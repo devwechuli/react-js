@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Tando extends Component {
-    state={
-        num:0
-    }
+  state = {
+    num: 0
+  };
+
+  makeTimer = setInterval(() => {
+    let randomNumber = Math.floor(Math.random() * this.props.maxNum);
+    this.setState({ num: randomNumber });
+  }, 2000);
+
   render() {
     return (
-      <div>
-        
-      </div>
-    )
+      <React.Fragment>
+        <h1>{this.state.num}</h1>
+      </React.Fragment>
+    );
   }
 }
 
-export default Tando
+export default Tando;

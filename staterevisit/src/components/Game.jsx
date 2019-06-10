@@ -12,6 +12,8 @@ class Game extends Component {
     this.setState({ name, track: !this.state.track });
   };
 
+
+
   render() {
     return (
       <Fragment>
