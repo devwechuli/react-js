@@ -1,5 +1,63 @@
-.Die{
-    font-size: 10em;
-    padding: 0.25em;
-    color:slateblue
+.Die {
+  font-size: 10em;
+  padding: 0.25em;
+  color: slateblue;
+ 
 }
+.rolling{
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+.rolldice {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.rolldice button {
+  width: 15em;
+  padding: 1.5em;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  margin-top: 3em;
+  align-self: center;
+}
+.rolldice button:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+.rolldicecont {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+
+.Die:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
