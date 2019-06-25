@@ -19,4 +19,5 @@ Some good design patterns:
 - **Minimize Your State** - You want to try to put as little data in state as possible. Litmus test 
     - does x change?If not, x should not be part of state. It should be a prop.
     - is x already captured by some other value y in state or props? If so, derive it from there instead
+    
 - **Downward Data Flow** - State should live on the parent. We want to support the 'downward data flow philosophy of React'. In general, it makes more sense for a parent component to manage state and have a bunch of 'dumb' stateless child display components. This makes debugging easier, because the state is centralized. It's easier to predict where to find state.
