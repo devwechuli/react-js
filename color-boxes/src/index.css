@@ -9,12 +9,25 @@
   height: 30vh;
   width: 35vh;
   border: 2px solid black;
-
 }
 
-.colorBoxes{
+.colorBoxes {
   display: flex;
   flex-flow: row wrap;
   margin-left: 40px;
 }
 
+.Box {
+  height: 20em;
+  width: 20em;
+}
+.Box:hover {
+  cursor: pointer;
+}
+.BoxContainer {
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}

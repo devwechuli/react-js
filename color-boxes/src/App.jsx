@@ -1,10 +1,12 @@
 import React, { Fragment } from "react";
-import ColorBoxes from "./components/ColorBoxes";
+import ColorBoxes from "./components/custom/ColorBoxes";
+import Box from "./Box";
+import BoxContainer from "./BoxContainer";
 
 function App() {
   return (
     <Fragment>
-      <ColorBoxes />
+<BoxContainer/>
     </Fragment>
   );
 }
