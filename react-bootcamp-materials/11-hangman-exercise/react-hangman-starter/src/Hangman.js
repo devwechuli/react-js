@@ -101,7 +101,7 @@ class Hangman extends Component {
               <p className="Hangman-btns">{this.generateButtons()}</p>
             ]}
 
-            {this.findWinner()?(<p>You have won</p>):(null)}
+            {!this.findWinner()?(<p>You have won</p>):(null)}
       </div>
     );
   }
