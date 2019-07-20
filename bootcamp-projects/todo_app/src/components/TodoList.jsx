@@ -6,7 +6,7 @@ class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: [{ id: "unique", text: "This is my first todo" }]
+            todos: []
         };
         this.addTodo = this.addTodo.bind(this);
         this.editTodo = this.editTodo.bind(this);
