@@ -1,0 +1,10 @@
+.Deck-cardarea{
+    margin-top: 80px;
+    background-color: blue;
+}
+.title{
+    color:azure;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
