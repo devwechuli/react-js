@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
 class UncontrolledInputs extends Component {
+    state = {
+
+    }
     render() {
         return (
      <section>
-         <form action="">
-             <input type="text"/>
-             <input type="email" name="" id=""/>
+         <form>
+             <input type="text" name="name"/>
+             <input type="email" name="email" id=""/>
              <input type="submit" value="Submit"/>
          </form>
      </section>

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ControlledInputs from "./components/ControlledInputs";
+import AsyncSetState from "./components/AsyncSetState";
 
 const Person = ({ img, name, age, info }) => {
   return (
@@ -95,6 +96,7 @@ function App() {
     <div>
       <PersonList />
       <ControlledInputs/>
+      <AsyncSetState/>
       
     </div>
   );
